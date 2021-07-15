@@ -20,6 +20,9 @@ ul li {
     list-style: none;
     padding-right: 30px;
 }
+ul li:hover a{
+    color: #E02C6D;
+}
 nav ul li a{
     text-decoration: none;
     color: white;   
@@ -38,9 +41,7 @@ nav ul li a{
     padding: 8px 20px;
     color: white;
     font-size: 16px;
-    background: #E02C6D;
-   
-    
+    background: #E02C6D;    
 }
 /*--------------
   banner section 
@@ -60,7 +61,7 @@ h1{
 .left-width{
     width: 50%;
     padding-bottom: 50px;  
-    padding-left: 100px;
+    padding-left: 90px;
     margin: 2%;
     justify-content: center;
     align-items: center;
@@ -130,7 +131,7 @@ main{
     font-weight: 400;
 }
 /*------------------------ 
-  secsecond-banner section
+  secsecond-banner styles
   ------------------------*/
   .second-banner{
     height: auto;
@@ -152,8 +153,8 @@ main{
     color: royalblue;
 }
 .top-blogs{ 
-   padding-left: 150px;
-   margin: 150px;
+   padding-left: 100px;
+   margin-bottom:100px; 
 }
 .blogs{
     display: grid;
@@ -166,6 +167,8 @@ main{
 .blog .thumbnail img{
     width: 177px;
     height: 117px;
+    border: royalblue solid ;
+    border-radius: 15px;
 }
 .blog-info{
     margin-left:16px ;
@@ -210,6 +213,82 @@ main{
 .footer-end{
     padding-left: 125px;
 }
+
+/*---------------------
+     Media Queries
+------------------------- */
+/* Mobile Devices */
+@media only screen and (max-width:688px) {
+
+
+.header-container{
+    display: none;
+}
+.banner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.right-width img {
+    width: 100%;
+    
+}
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.player{
+   
+}
+
+.second-banner{
+    display: flex;
+    flex-direction: column;
+}
+
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.blog{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.footer-img{
+ width: 100%;
+}
+/*------------------
+    tablate Devices
+ ------------------ */
+ @media only screen and (min-width:688px) and (max-width:992px){
+     
+   header{
+       display: none;
+   }
+   .right-width img{
+       width: 100%;
+   }
+   .players{
+       grid-template-columns: repeat(2,1fr);
+   }
+
+   .second-banner{
+       flex-direction: unset;
+   }
+   .blogs{
+       grid-template-columns: repeat(2,1fr);
+   }
+   .footer-img{
+       width:70%;
+   }
+
+ }
+
+    
+
+    
 
 
 
